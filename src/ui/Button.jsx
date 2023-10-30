@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Button({ children, disabled, to, type }) {
+function Button({ children, disabled, to, type, onClick }) {
   const miniButtonStyle = `focus: inline-block rounded-full 
     font-bold uppercase tracking-wide transition-colors 
     focus:outline-none focus:ring focus:ring-offset-2 
@@ -28,6 +28,17 @@ function Button({ children, disabled, to, type }) {
       <Link className={buttonStyles[type]} to={to}>
         {children}
       </Link>
+    );
+
+  if (onClick)
+    return (
+      <button
+        onClick={onClick}
+        disabled={disabled}
+        className={buttonStyles[type]}
+      >
+        {children}
+      </button>
     );
 
   return (
