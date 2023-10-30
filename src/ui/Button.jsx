@@ -4,7 +4,7 @@ function Button({ children, disabled, to, type }) {
   const miniButtonStyle = `focus: inline-block rounded-full 
     font-bold uppercase tracking-wide transition-colors 
     focus:outline-none focus:ring focus:ring-offset-2 
-    disabled:cursor-not-allowed`;
+    disabled:cursor-not-allowed text-sm`;
 
   const buttonBaseStyle = `${miniButtonStyle}  bg-yellow-400 
     text-stone-800 hover:bg-yellow-300 focus:bg-yellow-300  
