@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 import Button from "../../ui/Button";
@@ -115,6 +114,7 @@ function CreateOrder() {
   );
 }
 
+//eslint-disable-next-line
 export async function action({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
